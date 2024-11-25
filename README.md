@@ -10,8 +10,8 @@ Recommends the right fertilizers, their quantities, and costs based on soil cond
 3. Disease Prediction
 Identifies potential crop diseases using historical and environmental data, helping you take preventive measures.
 
-4.Pest Prediction
+4. Pest Prediction
 Predicts pest attacks and provides solutions to mitigate their impact.
 
-4.Irrigation Planning
+5. Irrigation Planning
 Guides on optimal irrigation schedules and water usage based on weather forecasts and soil moisture levels.
