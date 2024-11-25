@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Prediction Form</title>
+    <link rel="stylesheet" href="cropstyles.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+        <h1>Crop Yield Prediction Form</h1>
+        <form id="cropYieldForm">
+            <!-- Latitude and Longitude Inputs -->
+            <div class="form-group">
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude" name="latitude" placeholder="Enter latitude">
+            </div>
+            
+            <div class="form-group">
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude" name="longitude" placeholder="Enter longitude">
+            </div>
+
+            <!-- Temperature Input -->
+            <div class="form-group">
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" id="temperature" name="temperature" placeholder="Enter temperature">
+            </div>
+
+            <!-- Humidity Input -->
+            <div class="form-group">
+                <label for="humidity">Humidity (%):</label>
+                <input type="number" id="humidity" name="humidity" placeholder="Enter humidity">
+            </div>
+
+            <!-- Soil Type Selection -->
+            <div class="form-group">
+                <label for="soilType">Soil Type:</label>
+                <select id="soilType" name="soilType">
+                    <option value="sandy">Sandy</option>
+                    <option value="clay">Clay</option>
+                    <option value="silt">Silt</option>
+                    <option value="loam">Loam</option>
+                </select>
+            </div>
+
+            <!-- pH Value Input -->
+            <div class="form-group">
+                <label for="pHValue">Soil pH Value:</label>
+                <input type="number" id="pHValue" name="pHValue" step="0.1" placeholder="Enter pH value">
+            </div>
+
+            <!-- Organic Carbon Input -->
+            <div class="form-group">
+                <label for="organicCarbon">Organic Carbon Content (%):</label>
+                <input type="number" id="organicCarbon" name="organicCarbon" placeholder="Enter organic carbon content">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="button" onclick="submitForm()">Get Crop Suggestions</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="popupBox">
+    <span class="close-btn-yield" onclick="closePopup()">×</span>
+    <h2>Suggested Crop Info</h2>
+    <p id="suggestionsContent">Suggestions will appear here...</p>
+</div>
+
+<script src="cropscript.js"></script>
+
+</body>
+</html>
+

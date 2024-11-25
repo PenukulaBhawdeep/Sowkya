@@ -1,0 +1,306 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body, html {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #160a0a;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/*.logo img {
+    width: 60px;
+    height: auto;
+}*/
+.logo h1{
+    color: #28a745;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 42px;
+}
+.logo a{
+    color: #28a745;
+    text-decoration: none;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+}
+
+.navbar li {
+    position: relative;
+    top: 17px;
+}
+
+.navbar a {
+    color: #28a745;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #28a745;
+    transition: width 0.3s ease;
+    margin-top: 5px;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: #28a745;
+}
+
+/* Ensure the content is not hidden behind the navbar */
+.image-container {
+    margin-top: 80px;
+}
+
+.image-container img {
+    width: 100%;
+    height: calc(100vh - 80px);
+    object-fit: cover;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('C:/Users/bhawd/OneDrive/Documents/agrismart front end/images/home.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 80px; /* Ensures the hero content is below the navbar */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for better text readability */
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    padding-top: 93px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 65px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.about-section h1 {
+    color: lightgrey;
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    color: #333;
+    font-size: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Heading */
+.services-heading {
+    text-align: center; /* Center the heading */
+    font-size: 58px; /* Size of the heading */
+    color: lightgrey; /* Light grey color */
+    margin-bottom: 20px; /* Space between the heading and the blocks */
+    width: 100%; /* Ensure the heading takes full width */
+    display: block; /* Ensures the heading occupies a line above the boxes */
+}
+
+/* Services Section */
+.services-section {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for blocks */
+    justify-content: center; /* Center the blocks */
+    margin: 40px 0; /* Space above and below the section */
+    text-align: center; /* Center the content */
+}
+
+.service-block {
+    position: relative;
+    width: 390px; /* Width of each block */
+    height: 500px; /* Height of each block */
+    margin: 10px; /* Space between blocks */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.service-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the block without distortion */
+    transition: transform 0.3s ease;
+}
+
+.service-block:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+
+.service-block:hover img {
+    transform: scale(1.05); /* Scale image slightly on hover */
+}
+
+/* Updated text-overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* White text */
+    font-size: 24px; /* Larger font size for text */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center the text inside the block */
+    padding: 0; /* Remove padding */
+    background: none; /* Remove the background color */
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .service-block {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.footer-social, .footer-contact {
+    flex-basis: 50%;
+}
+
+.footer-social h4, .footer-contact h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+/* Responsive Footer for Small Screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social, .footer-contact {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-social img {
+        width: 25px;
+        height: 25px;
+    }
+}

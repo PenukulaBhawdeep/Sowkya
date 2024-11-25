@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Prediction</title>
+    <link rel="stylesheet" href="fertstyles.css">
+</head>
+<body>
+
+    <!-- Wrapper to contain all content -->
+    <div class="wrapper">
+        <div class="container">
+            <h1>Fertilizer Prediction</h1>
+            <form id="fertilizerForm">
+                <label for="crop-type">Crop Type:</label>
+                <select id="crop-type" name="crop">
+                    <option value="Rice">Rice</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Groundnut">Groundnut</option>
+                    <option value="Millet">Millet</option>
+                </select>
+
+                <label for="soil-type">Soil Type:</label>
+                <select id="soil-type" name="soilType">
+                    <option value="Red_Soil">Red Soil</option>
+                    <option value="Clayey_Soil">Clayey Soil</option>
+                    <option value="Alluvial_Soil">Alluvial Soil</option>
+                    <option value="Black_Soil">Black Soil</option>
+                </select>
+                
+                <label for="n">Nitrogen (N):</label>
+                <input type="number" id="n" name="n" required>
+
+                <label for="p">Phosphorus (P):</label>
+                <input type="number" id="p" name="p" required>
+
+                <label for="k">Potassium (K):</label>
+                <input type="number" id="k" name="k" required>
+
+                <label for="area">Area (hectares):</label>
+                <input type="number" id="area" name="area" required>
+
+                <label for="month">Month (1-7):</label>
+                <input type="number" id="month" name="month" min="1" max="7" required>
+
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup Box -->
+    <div class="popup" id="fertilizer-popup">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <h2 id="fertilizer-name">Fertilizer Name</h2>
+        <p id="fertilizer-amount">Amount: 100kg</p>
+        <p id="fertilizer-cost">Cost: $200</p>
+    </div>
+
+    <script src="ferscript.js"></script>
+</body>
+</html>

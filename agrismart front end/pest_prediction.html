@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pest Prediction</title>
+    <link rel="stylesheet" href="pest.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pest Prediction</h1>
+        <form id="pestPredictionForm">
+            <label for="cropType">Crop Type:</label>
+            <input type="text" id="cropType" placeholder="Enter crop type (e.g., cotton)" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="closePopup" class="close">&times;</span>
+            <p id="pestResult"></p>
+        </div>
+    </div>
+
+    <script src="pest.js"></script>
+</body>
+</html>

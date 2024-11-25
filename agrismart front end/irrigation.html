@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="irrigation.css">
+    <title>Irrigation Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Irrigation Calculator</h1>
+        <form id="irrigationForm">
+            <label for="latitude">Latitude:</label>
+            <input type="number" id="latitude" required>
+            
+            <label for="longitude">Longitude:</label>
+            <input type="number" id="longitude" required>
+            
+            <label for="cropType">Crop Type:</label>
+            <select id="cropType" required>
+                <option value="">Select Crop</option>
+                <option value="Rice">Rice</option>
+                <option value="Maize">Maize</option>
+                <option value="Groundnut">Groundnut</option>
+                <option value="Red Gram">Red Gram</option>
+            </select>
+            
+            <label for="soilMoisture">Soil Moisture Level (0-100):</label>
+            <input type="number" id="soilMoisture" min="0" max="100" required>
+            
+            <label for="growthStage">Growth Stage:</label>
+            <select id="growthStage" required>
+                <option value="">Select Stage</option>
+                <option value="Land preparation, Sowing (Nursery)">Land preparation, Sowing (Nursery)</option>
+                <option value="Transplanting, Early Vegetative">Transplanting, Early Vegetative</option>
+                <option value="Vegetative (Tillering)">Vegetative (Tillering)</option>
+                <option value="Reproductive (Panicle initiation)">Reproductive (Panicle initiation)</option>
+                <option value="Flowering and Grain Filling">Flowering and Grain Filling</option>
+                <option value="Maturity and Harvest">Maturity and Harvest</option>
+            </select>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="irrigation.js"></script>
+</body>
+</html>
